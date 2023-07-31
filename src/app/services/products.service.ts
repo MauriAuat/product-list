@@ -19,6 +19,8 @@ export class ProductsService {
   
   constructor(private http: HttpClient) { }
   
+
+
   getProducts():Observable<Product[]>{
     const productos =this.http.get<Product[]>(this.url)
     .pipe(//agrego la clave cantidad para que pueda ser usado a la hora de agregar el producto al carrito

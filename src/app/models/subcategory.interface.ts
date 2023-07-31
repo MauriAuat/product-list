@@ -1,4 +1,4 @@
-export interface Subcaterogia{
+export interface Subcategoria{
     id: number;
     nombre:string;
     imagen:string;

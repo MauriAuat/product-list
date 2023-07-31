@@ -1,0 +1,17 @@
+<div class="container">
+    
+    <div *ngFor="let prod of productos" class="card" style="width: 18rem;">
+      <img class="img-product" src="{{urlBase+prod.imagenes[0].nombre+extension}}" alt="imagen ilustrativa">
+      <div class="card-body">
+        <h4 class="category">{{getCategory(prod.id_subcategoria)}}</h4>
+        <h5 class="card-title">{{prod.nombre}}</h5>
+        <p class="card-text">{{prod.precio | currency: '$'}}</p>
+        <p class="card-text">Stock: {{prod.stock}}</p>
+        <button type="button" class="btn btn-dark" (click)="addToCart(prod)">
+          Agregar al carrito
+          <i class="fa-sharp fa-solid fa-cart-shopping fa-xl"></i>
+        </button>
+        </div>
+    </div>
+  </div>
+  

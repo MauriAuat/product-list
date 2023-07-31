@@ -1,6 +1,6 @@
 import { Component, OnInit,NgModule } from '@angular/core';
-import { Product } from 'src/app/models/product';
-import { Subcaterogia } from 'src/app/models/subcategory';
+import { Product } from 'src/app/models/product.interface';
+import { Subcaterogia } from 'src/app/models/subcategory.interface';
 import { ProductsService } from 'src/app/services/products.service';
 import { SubcategoryService } from 'src/app/services/subcategory.service';
 @Component({
@@ -19,6 +19,7 @@ export class CardComponent implements OnInit {
   ngOnInit(): void {
     
     this.productService.getProducts().subscribe(producto=>{
+      
       this.productos =producto;
       
     });
@@ -42,4 +43,7 @@ export class CardComponent implements OnInit {
       
   }
 
+  addToCart(product:Product){
+    return this.productService.addProduct(product);
+  }
 }

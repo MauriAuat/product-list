@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { reduce } from 'rxjs';
 import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
@@ -8,7 +7,6 @@ import { ProductsService } from 'src/app/services/products.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-
 
   myCartObs= this.productService.myCartObs;
   cantProd!:number;

@@ -1,38 +1,41 @@
-.container{
-    
-    
+
+.cards-container{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
     margin-left:10px;
-    
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-evenly;
-    /* display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 1fr; 
-    gap: 10px 10px; 
-    justify-content: space-evenly;
-    grid-template-areas: 
-    ". . ."
-    ". . ."
-    ". . .";  */
-
 
 }
+
+.container{
+  
+    display: flex;
+    gap: 10px;
+    display: flex;
+    justify-content:flex-start;
+    width: 100%;
+}
+
+
+
 .card-body{
-margin-bottom: 10px;
-display: flex;
-flex-direction: column;
-align-items: center;
-
-
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex:1;
+    align-self: flex-start;
 }
-
-
 
 .card{
-width: 300px;
-margin:10px;
-flex:none;
+    display: flex;
+    width: 300px;
+    margin:10px;
+    height: 570px;
+}
+
+.message{
+    text-align: center;
 }

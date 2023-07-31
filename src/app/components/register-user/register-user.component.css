@@ -1,9 +1,15 @@
-.form-container{
+.form-card-container{
     margin-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+}
+.form-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .form-field{
     display: flex;

@@ -4,18 +4,22 @@
     justify-content: center;
     padding: 1rem;
 }
+
 .product-cart{
     padding:1rem;
     display:flex;
     justify-content: space-around;
     align-items: center;
 }
+
 .product-cart-body{
     flex-basis: 50%;
 }
+
 .product-cart-total{
     flex-basis: 20%;
 }
+
 .product-cart-buttons{
     display: flex;
     flex-basis: 30%;
@@ -23,27 +27,32 @@
     justify-content: space-between;
     gap: 2rem;
 }
+
 .product-cart-body-info{
     display:flex;
     gap:1rem;
 }
+
 .product-cart-buttons-operators{
     display: flex;
     align-items: center;
     gap:1rem;
 }
+
 .product-cart-buttons-operators>span{
     border:1px solid lightgrey;
     border-radius: 0.5rem;
     padding: 0.5rem;
-
 }
+
 .cart-total{
     padding:1rem;
 }
+
 .cart-total-all{
-font-size: 1.2rem;
+    font-size: 1.2rem;
 }
+
 .cart-btn{
     width: 50%;
     align-self: center;

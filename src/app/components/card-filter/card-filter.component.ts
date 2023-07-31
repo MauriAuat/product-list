@@ -24,19 +24,18 @@ export class CardFilterComponent implements OnInit {
   ngOnInit(): void { 
     this.route.params.subscribe(params=>{
 
-      this.subcategoriaService.idCatObs.subscribe((newNumber)=>{
-        this.idCat = newNumber;
-      })
-      this.productService.getProducts().subscribe(producto=>{ 
+      this.subcategoriaService.idCatObs.subscribe((newNumber)=>{this.idCat = newNumber;})
+
+      this.productService.getProducts().subscribe(producto=>{
         this.productos =producto.filter(pr=>pr.id_subcategoria===this.idCat);
       });
+
       this.subcategoriaService.getSubCategory().subscribe(data=>{
         this.subcategorias=data;
       })
+
       this.productos=this.productos.filter(el=>{el.id_subcategoria===this.idCat})
     })
-
-
   }
 
   //hago una busqueda de la categoria desde el array de categorias y el producto iterado; devuelve el nombre de la categoria
@@ -50,8 +49,7 @@ export class CardFilterComponent implements OnInit {
       return "undefined";
     }else{
       return  cat!.nombre;
-    }
-      
+    }    
   }
 
   addToCart(product:Product){

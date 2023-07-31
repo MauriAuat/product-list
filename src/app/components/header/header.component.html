@@ -1,13 +1,21 @@
 <nav class="navbar">
     <div class="navbar-logo">
-        <i class="fa-solid fa-computer fa-2x" style="color: #ff5900;"></i> 
+        <i class="fa-solid fa-computer fa-2x" ></i> 
     </div>
-    <div class="navbar-title">Tienda de articulos de Computacion</div>
-    <div class="navbar-cart">
-        <div class="navbar-cart-items">
-            <p>{{cantProd}}</p>
+    <div class="navbar-title">
+        Tienda de articulos de Computacion
+    </div>
+    <div class="icon-container">
+        <div class="navbar-cart">
+            <div class="navbar-cart-items">
+                <p>{{cantProd}}</p>
+            </div>
+            <i class="cart-icon fa-solid fa-cart-shopping fa-xl cursor" (click)="onToogleCart()"></i>
         </div>
-        <i class="fa-solid fa-cart-shopping fa-xl" (click)="onToogleCart()"></i>
+        <div class="register-icon">
+            <i class="fa-solid fa-right-to-bracket fa-xl cursor" routerLink="/registro"></i>
+        </div>
+        
     </div>
 </nav>
 <div class="cart" [ngClass]="{show:viewCart}">

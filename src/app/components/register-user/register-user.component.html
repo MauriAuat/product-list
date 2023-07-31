@@ -1,0 +1,52 @@
+<form [formGroup]="registroForm" (ngSubmit)="saveUser()">
+        <div class="form-container">
+        <div class="form-field" >
+          <label class="title" for="nombre">Nombre:</label>
+          <input type="text" id="nombre" formControlName="nombre" required>
+          <div *ngIf="registroForm.get('nombre')?.invalid && (registroForm.get('nombre')?.dirty || registroForm.get('nombre')?.touched)">
+            <div *ngIf="registroForm.get('nombre')?.hasError('required')" style="color:red; font-size: 0.8rem;" >El nombre es requerido.</div>
+          </div>
+        </div>
+      
+        <div class="form-field">
+          <label class="title" for="apellido">Apellido:</label>
+          <input type="text" id="apellido" formControlName="apellido" required>
+          <div *ngIf="registroForm.get('apellido')?.invalid && (registroForm.get('apellido')?.dirty || registroForm.get('apellido')?.touched)">
+            <div *ngIf="registroForm.get('apellido')?.hasError('required')" style="color:red; font-size: 0.8rem;">El apellido es requerido.</div>
+          </div>
+        </div>
+      
+        <div class="form-field">
+          <label class="title" for="dni">DNI:</label>
+          <input type="text" id="dni" formControlName="dni" required pattern="^[0-9]{8}$">
+          <div *ngIf="registroForm.get('dni')?.invalid && (registroForm.get('dni')?.dirty || registroForm.get('dni')?.touched)">
+            <div *ngIf="registroForm.get('dni')?.hasError('required')" style="color:red; font-size: 0.8rem;">El DNI es requerido.</div>
+            <div *ngIf="registroForm.get('dni')?.hasError('pattern')" style="color:red; font-size: 0.8rem;">El DNI debe tener 8 dígitos numéricos.</div>
+          </div>
+        </div>
+      
+        <div class="form-field">
+          <label class="title" for="mail">Mail:</label>
+          <input type="email" id="mail" formControlName="mail" required>
+          <div *ngIf="registroForm.get('mail')?.invalid && (registroForm.get('mail')?.dirty || registroForm.get('mail')?.touched)">
+            <div *ngIf="registroForm.get('mail')?.hasError('required')" style="color:red; font-size: 0.8rem;">El mail es requerido.</div>
+            <div *ngIf="registroForm.get('mail')?.hasError('email')" style="color:red; font-size: 0.8rem;">El mail debe tener un formato válido.</div>
+          </div>
+        </div>
+      
+        <div class="form-field">
+          <label class="title" for="telefono">Teléfono:</label>
+          <input type="text" id="telefono" formControlName="telefono" required pattern="^[0-9]{9}$">
+          <div *ngIf="registroForm.get('telefono')?.invalid && (registroForm.get('telefono')?.dirty || registroForm.get('telefono')?.touched)">
+            <div *ngIf="registroForm.get('telefono')?.hasError('required')" style="color:red; font-size: 0.8rem;">El teléfono es requerido.</div>
+            <div *ngIf="registroForm.get('telefono')?.hasError('pattern')" style="color:red; font-size: 0.8rem;">El teléfono debe tener 9 dígitos numéricos.</div>
+          </div>
+        </div>
+      
+<div class="button">
+
+    <button type="submit" [disabled]="registroForm.invalid">Registrarse</button>
+</div>
+      
+    </div>
+      </form>

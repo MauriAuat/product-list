@@ -2,9 +2,11 @@
     padding:1rem;
     display:flex;
     justify-content: space-between;
-    border: 15px solid rgb(253, 97, 26);
-    border-radius: 20%;
-    margin-bottom: 15px;
+    flex-wrap: nowrap;
+    background-image: linear-gradient(to right, rgb(253, 97, 26) 0%,rgb(251, 197, 172) 100%);  
+    margin:30px 30px;
+    height: 100px;
+    margin-bottom: 15px; 
 }
 
 .navbar>.navbar-cart{
@@ -33,6 +35,9 @@ p{
 .cart{
     display: none;
 }
+.cart-icon{
+    display: flex;
+}
 .show{
     display: flex;
     flex-direction: column;
@@ -51,4 +56,13 @@ app-cart{
     flex-direction: column;
     justify-content: center;
      
+}
+.register-icon{
+    margin-left: 20px;
+    
+}
+.icon-container{
+    display: flex;
+    align-items: center;
+    justify-content:space-around ;
 }

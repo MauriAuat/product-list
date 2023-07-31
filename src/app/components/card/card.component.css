@@ -1,0 +1,44 @@
+
+.cards-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    margin-left:10px;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    /* display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 10px 10px; 
+    justify-content: space-evenly;
+    grid-template-areas: 
+    ". . ."
+    ". . ."
+    ". . .";  */
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.category{
+    flex:1;
+    height:100%;
+}
+
+.card-body{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex:1;
+    align-self: flex-start;
+}
+
+.card{
+    display: flex;
+    width: 300px;
+    margin:10px;
+    height: 570px;
+}

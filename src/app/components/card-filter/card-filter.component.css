@@ -1,0 +1,41 @@
+
+.cards-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    margin-left:10px;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+}
+
+.container{
+  
+    display: flex;
+    gap: 10px;
+    display: flex;
+    justify-content:flex-start;
+    width: 100%;
+}
+
+
+
+.card-body{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex:1;
+    align-self: flex-start;
+}
+
+.card{
+    display: flex;
+    width: 300px;
+    margin:10px;
+    height: 570px;
+}
+
+.message{
+    text-align: center;
+}

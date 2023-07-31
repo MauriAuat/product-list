@@ -1,0 +1,26 @@
+<div class="product-cart-wrapper">
+    <article class="product-cart" *ngFor="let prod of myCartObs |async">
+        <div class="product-cart-body">
+            <p>{{prod.nombre}}</p>
+            <div class="product-cart-body-info">
+                <p>{{prod.precio | currency: '$ '}}</p>
+            </div>
+        </div>
+    <div class="product-cart-total">
+        <p>{{prod.precio*prod.cantidad| currency: '$ '}}</p>
+    </div>
+    <div class="product-cart-buttons">
+        <div class="product-cart-buttons-operators">
+            <i class="fa-solid fa-minus" (click)="updateUnits('decrease',prod.id_producto)"></i>
+            <span>{{prod.cantidad}}</span>
+            <i class="fa-solid fa-plus" (click)="updateUnits('increase',prod.id_producto)"></i>
+        </div>
+        <i class="fa-solid fa-trash" (click)="deleteProduct(prod.id_producto)"></i>
+    </div>
+</article>
+<div class="cart-total">
+    <p class="cart-total-all">Total: {{totalCount() | currency: '$ '}}</p>
+</div>
+<button type="button" class="btn btn-secondary cart-btn">Ir a mi cesta</button>
+
+</div>

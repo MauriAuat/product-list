@@ -1,0 +1,8 @@
+<h3 class="list-group-item" style="font-family: Roboto;">Categorias</h3>
+
+  <ul class="list-group cursor" *ngFor="let category of categories; let index = index">
+    
+      <li class="list-group-item" (click)="getId(category.id)" routerLink="/filtrado/{{category.nombre.trim()}}" style="font-family: Roboto;">{{category.nombre}} </li>
+      
+  </ul>
+

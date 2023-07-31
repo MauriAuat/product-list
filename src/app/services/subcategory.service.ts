@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subcaterogia } from '../models/subcategory';
+import { Subcaterogia } from '../models/subcategory.interface';
 import { Observable } from 'rxjs';
 
 @Injectable({

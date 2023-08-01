@@ -1,4 +1,3 @@
-
 .cards-container{
     display: flex;
     flex-direction: row;
@@ -10,15 +9,12 @@
 }
 
 .container{
-  
     display: flex;
     gap: 10px;
     display: flex;
     justify-content:flex-start;
     width: 100%;
 }
-
-
 
 .card-body{
     margin-bottom: 10px;

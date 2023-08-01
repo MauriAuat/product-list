@@ -35,7 +35,7 @@ export class RegisterUserComponent implements OnInit {
       this.router.navigate(['']);
     } else {
       
-      alert('Formulario inválido, verifica los campos.');
+     // alert('Formulario inválido, verifica los campos.');
     }
   }
 
